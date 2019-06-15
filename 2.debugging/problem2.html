@@ -14,8 +14,8 @@
             quantity: 5,
             discount: function (percent) {
                 const discount = this.price * percent / 100;
-                this.price -= discount;
-                return this.price;
+                const discountedPrice = this.price - discount;
+                return discountedPrice;
             },
         };
         console.log("should equal to 80 => ",item.discount(20))   // should return 80

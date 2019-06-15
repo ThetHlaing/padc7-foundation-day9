@@ -15,12 +15,13 @@
             'with', 'yield'
         ];
         function isReserved(name) {
+            let isFound = false;
             RESERVED_KEYWORDS.forEach(function (reserved) {
                 if (name == reserved) {
-                    return true;
+                    isFound = true;
                 }
             });
-            return false;
+            return isFound;
         }
         console.log(isReserved('monkey')); // false
         console.log(isReserved('patch')); // false

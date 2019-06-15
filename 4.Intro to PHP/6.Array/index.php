@@ -1,5 +1,7 @@
 <?php
 
+$fruits = ["orange","apple"];
+
 $items = ['value'=>'TV', 'value2'=> 'Sofa', 'Cabin', 'Table'];
  
 $records = array(
@@ -24,7 +26,9 @@ $records = array(
         'last_name' => 'Doe',
     )
 );
+ //var_dump($items);   
+ var_dump(array_keys($items));
 
-
+var_dump(array_column($records,'last_name'));
 
 //Ref: https://www.php.net/manual/en/ref.array.php

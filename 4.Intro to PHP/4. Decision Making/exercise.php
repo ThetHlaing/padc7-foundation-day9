@@ -4,5 +4,18 @@
 //Use strtotime function to change the day
 //https://www.php.net/manual/en/function.strtotime.php
 
-$day = Date('D');
-echo $day;
+$day = Date('D',strtotime('next Friday'));
+
+switch ($day): 
+    case 'Fri': {
+            echo 'TGIF';
+            break;
+        }
+    case 'Mon': {
+            echo 'Monday Blue';
+            break;
+        }
+    default: {
+            echo 'Boring day';
+        }
+endswitch;
